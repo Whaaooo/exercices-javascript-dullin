@@ -56,7 +56,7 @@ console.log(doublethreetimes(3));
 
 // let's learn about functors ...
 // https://en.wikipedia.org/wiki/Functor_(functional_programming)
-// https://medium.com/@dtinth/what-is-a-functor-dcf510b098b6
+// https://medium.com/@dtinth/what-is-a-functor-dcf510b098b6  <--------------------------- BEST!!
 // https://stackoverflow.com/questions/2030863/in-functional-programming-what-is-a-functor
 
 

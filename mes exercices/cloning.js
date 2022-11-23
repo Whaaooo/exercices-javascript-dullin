@@ -57,10 +57,11 @@ const doublethreetimes = (double) ['∘'] (double) ['∘'] (double)
 console.log(doublethreetimes(3));
 */
 
-// let's learn about functors ...
+// let's learn about functors ... and apllicatives and monads while we're at it! Go Haskell Go!!!
 // https://en.wikipedia.org/wiki/Functor_(functional_programming)
 // https://medium.com/@dtinth/what-is-a-functor-dcf510b098b6  <--------------------------- BEST!!
 // above links to : https://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html
+// above links to : http://learnyouahaskell.com/a-fistful-of-monads
 // https://stackoverflow.com/questions/2030863/in-functional-programming-what-is-a-functor
 
 

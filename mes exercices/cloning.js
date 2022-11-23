@@ -14,6 +14,9 @@ if( (typeof A === "object" || typeof A === 'function') && (A !== null) )
 }
 */
 
+// get name of a variable (kinda meta, doncha think?) interestingly, uses Object.keys
+// https://stackoverflow.com/questions/4602141/variable-name-as-a-string-in-javascript
+
 // map function for objects, just like for arrays ?
 // https://stackoverflow.com/questions/14810506/map-function-for-objects-instead-of-arrays
 
@@ -57,6 +60,7 @@ console.log(doublethreetimes(3));
 // let's learn about functors ...
 // https://en.wikipedia.org/wiki/Functor_(functional_programming)
 // https://medium.com/@dtinth/what-is-a-functor-dcf510b098b6  <--------------------------- BEST!!
+// above links to : https://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html
 // https://stackoverflow.com/questions/2030863/in-functional-programming-what-is-a-functor
 
 

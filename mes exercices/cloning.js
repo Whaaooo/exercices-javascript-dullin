@@ -84,6 +84,7 @@ myObjectMix['property'] = 42;
 
 let [ newObjectJSON, newObjectARRAY ] = cloneFactory(myObjectMix);
 let newObjectSPREAD = { ...myObjectMix };
+let newObjectSC = structuredClone(myObjectMix);
 
 myObjectMix.int = 11;
 myObjectMix.string = "Bonjour";
@@ -101,8 +102,8 @@ myObjectMix.array[3][0] = 'II';
 
 myObjectMix['property'] = 4242;
 
-console.log(myObjectMix, newObjectJSON, newObjectARRAY, newObjectSPREAD);
-[ myObjectMix, newObjectARRAY, newObjectSPREAD ].map(object => object['function']('👻'));
+console.log(myObjectMix, newObjectJSON, newObjectARRAY, newObjectSPREAD, newObjectSC);
+[ myObjectMix, newObjectARRAY, newObjectSPREAD, newObjectSC ].map(object => object['function']('👻'));
 
 
 

@@ -76,7 +76,7 @@ const cloneFactory = thing => [ cloneJSON, cloneARRAY ].map(cloneFN => cloneFN(t
 let myObjectMix = {
     'int' : 1,
     'string' : "Hello",
-    'function' : x => console.log(`original function : ${x}☠️`),
+    //'function' : x => console.log(`original function : ${x}☠️`),
     'object' : { 'otherInt' : 2, 'otherString' : "World", 'otherObject' : { 'keyA' : 'A', 'keyB' : 'B' }, 'otherArray' : [ 'C', 'D', 'E' ] },
     'array' : [ 3, "!!", { 'keyF' : 'F', 'keyG' : 'G', 'keyH' : 'H' }, [ 'I', 'J' ] ]
 };
@@ -88,7 +88,7 @@ let newObjectSC = structuredClone(myObjectMix);
 
 myObjectMix.int = 11;
 myObjectMix.string = "Bonjour";
-myObjectMix['function'] = x => console.log(`modified function : ${x}💀`);
+//myObjectMix['function'] = x => console.log(`modified function : ${x}💀`);
 
 myObjectMix.object.otherInt = 22;
 myObjectMix.object.otherString = "Monde";
@@ -103,7 +103,7 @@ myObjectMix.array[3][0] = 'II';
 myObjectMix['property'] = 4242;
 
 console.log(myObjectMix, newObjectJSON, newObjectARRAY, newObjectSPREAD, newObjectSC);
-[ myObjectMix, newObjectARRAY, newObjectSPREAD, newObjectSC ].map(object => object['function']('👻'));
+//[ myObjectMix, newObjectARRAY, newObjectSPREAD ].map(object => object['function']('👻'));
 
 
 
@@ -114,7 +114,7 @@ console.log("\n\n\n");
 let myArrayMix = [
     1,
     "Hello",
-    x => console.log(`original function : ${x}☠️`),
+    NaN,//x => console.log(`original function : ${x}☠️`),
     { 'otherInt' : 2, 'otherString' : "World", 'otherObject' : { 'keyA' : 'A', 'keyB' : 'B' }, 'otherArray' : [ 'C', 'D', 'E' ] },
     [ 3, "!!", { 'keyF' : 'F', 'keyG' : 'G', 'keyH' : 'H' }, [ 'I', 'J' ] ]
 ];
@@ -122,10 +122,11 @@ myArrayMix["property"] = 42;
 
 let [ newArrayJSON, newArrayARRAY ] = cloneFactory(myArrayMix);
 let newArraySPREAD = [ ...myArrayMix ];
+let newArraySC = structuredClone(myArrayMix);
 
 myArrayMix[0] = 11;
 myArrayMix[1] = "Bonjour";
-myArrayMix[2] = x => console.log(`modified function : ${x}💀`);
+//myArrayMix[2] = x => console.log(`modified function : ${x}💀`);
 
 myArrayMix[3].otherInt = 22;
 myArrayMix[3].otherString = "Monde";
@@ -139,8 +140,8 @@ myArrayMix[4][3][0] = 'II';
 
 myArrayMix["property"] = 4242;
 
-console.log(myArrayMix, newArrayJSON, newArrayARRAY, newArraySPREAD);
-[ myArrayMix, newArrayARRAY, newArraySPREAD ].map(object => object[2]('👽'));
+console.log(myArrayMix, newArrayJSON, newArrayARRAY, newArraySPREAD, newArraySC);
+//[ myArrayMix, newArrayARRAY, newArraySPREAD ].map(object => object[2]('👽'));
 
 
 

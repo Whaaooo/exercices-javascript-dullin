@@ -14,9 +14,6 @@ if( (typeof A === "object" || typeof A === 'function') && (A !== null) )
 }
 */
 
-// get name of a variable (kinda meta, doncha think?) interestingly, uses Object.keys
-// https://stackoverflow.com/questions/4602141/variable-name-as-a-string-in-javascript
-
 // map function for objects, just like for arrays ?
 // https://stackoverflow.com/questions/14810506/map-function-for-objects-instead-of-arrays
 
@@ -27,6 +24,15 @@ Object.keys(myObject).forEach(function(key, index) {
     myObject[key] *= 2;
 });
 console.log(myObject);
+*/
+
+// get name of a variable (kinda meta, doncha think?)
+// https://stackoverflow.com/questions/4602141/variable-name-as-a-string-in-javascript
+
+/*
+let a;
+console.log(Object.keys({a})[0]);
+console.log((() => a ).toString().replace(/[ |\(\)=>]/g, ''));
 */
 
 // Array.reduce & Array.reduceRight (like Mathematica's Fold)
@@ -47,12 +53,12 @@ console.log(add1ThenTimes2(3), times2ThenAdd1(3));
 
 /*
 Function.prototype['∘'] = function(f){
-  return x => this(f(x))
-}
+  return x => this(f(x));
+};
 
-const multiply = a => b => (a * b)
-const double = multiply (2)
-const doublethreetimes = (double) ['∘'] (double) ['∘'] (double)
+const multiply = a => b => (a * b);
+const double = multiply(2);
+const doublethreetimes = double ['∘'] (double) ['∘'] (double); // rhs needs (), not lhs
 
 console.log(doublethreetimes(3));
 */
